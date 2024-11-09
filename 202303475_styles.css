@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+/*Set background color*/
+body {
+    background-color: rgb(189, 144, 122); 
+}
+/*Set default font for all text*/
+body,p {
+    font-family: Arial, sans-serif;
+}
+/*h1 title font, line, color, uppercase, and letter spacing settings*/
+h1 {
+    font-family: "Times New Roman", Times, sans-serif;
+    text-decoration-line: underline overline;
+    text-decoration-color: rgb(84, 52, 7);
+    text-decoration-style: solid;
+    text-transform: uppercase;
+    color: hsl(0, 41%, 12%);
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 10px 30px 40px;
+    padding: 10px;
+    text-indent: 5px;
+    letter-spacing: 5px;
+    line-height: 1.4;
+}
+/*Font, color, and italic style for h2*/
+h2 {
+    font-family: "Times New Roman", Times, sans-serif;
+    color:rgb(157, 114, 20);
+    font-style: italic;
+}
+/*Text color for paragraph*/
+p {
+    color: #787878;
+}
+
+/*Set background color and logo image in header (no-repeat, size, position)*/
+header {
+    background-color: whitesmoke;
+    background-image: url("202303475images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: right top;
+    padding:15px;
+    
+}
+/*Set background color and padding for footer*/
+footer {
+    background-color: hsl(210, 30%, 90%);
+    padding:15px;
+}
+/*Set background color and padding for section*/
+section{
+    background-color: beige;
+    padding: 15px 15px;
+}
+/*Set background color, padding, and margin with different values*/
+article {
+    background-color: #f3e5ab;;
+    margin: 10px 20px 30px 40px;
+    padding: 5px 15px 10px 20px;
+}
+/*Set border, text, and background color for table*/
+table {
+    border: 3px double #9e887f;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+    background-color: #f9f9f9;
+}
+
+th, td {
+    border: 3px solid grey;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    background-color: rgb(143, 151, 159);
+    color: rgb(30, 36, 49);
+    font-size: 20px;
+    letter-spacing: 5px;
+
+}
+/*Set alternating background color for even and odd rows*/
+tr:nth-child(even){
+    background-color: #e8eff5e3;
+}
+tr:nth-child(odd) {
+    background-color: white;
+}
+/*Set image size to fit within cell*/
+td img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/*Different border styles*/
+.img-style-1 {
+    border: 5px dashed hsl(25, 80%, 50%);
+    padding: 5px;
+}
+
+.img-style-2 {
+    border: 3px solid #53360a;
+    padding: 5px;
+}
+
+/*Use scroll to manage overflow*/
+.history-box {
+    background-color: rgb(239, 226, 203);
+    width: 30%;
+    padding: 15px 5px 17px 20px;
+    margin: 10px;
+    height: 150px;
+    border: 2px solid black;
+    overflow: scroll;
+    float:left;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+
+
+/* clearfix class */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Arrange food images in a row with three items*/
+.food-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.food-list li {
+    float: left;
+    width: 30%; /*Arrange three items per row */
+    margin: 1.66%; /* Adjust spacing */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.food-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*Apply link, visited, hover, and active states*/
+a:link{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a:visited {
+    background-color: rgb(255, 255, 255);
+    color: darkgray;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+a:hover {
+    background-color: green;
+    color: white;
+}
+a:active{
+    background-color: hsl(330, 100%, 70%);;
+    text-decoration: underline;
+}
+
+/* Create navigation bar */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:10;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+}
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+}
+.nav-menu li {
+    flex: 1;
+    border-right: 1px solid white;
+}
+.nav-menu li:last-child {
+    border-right: none;
+}
+.nav-menu li a {
+    display:block;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-menu li a:hover:not(.active) {
+    background-color: #111;
+    color: white;
+}
+.nav-menu .active {
+    background-color: #04AA6D;
+}
+
+/*Dropdown button and content styling*/
+.dropbtn {
+    background-color: #eb9855;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.dropdown-content a{
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+}
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {background-color: #5592cb;}
+
